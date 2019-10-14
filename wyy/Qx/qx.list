@@ -1,0 +1,11 @@
+#Qx
+host-suffix, music.163.com, 自建网易云解锁
+host-suffix, music.126.net, 自建网易云解锁
+user-agent, NeteaseMusic*, 自建网易云解锁
+user-agent, NeteaseMusic**, 自建网易云解锁
+user-agent, 网易云音乐*, 自建网易云解锁
+user-agent, 网易云音乐**, 自建网易云解锁
+user-agent, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*, 自建网易云解锁
+user-agent, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90**, 自建网易云解锁
+host-keyword, netease, 自建网易云解锁
+user-agent,wyy.imi6.cn, 自建网易云解锁
