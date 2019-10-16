@@ -1,10 +1,10 @@
 # REJECT
-URL-REGEX,https?://interface3?.music.163.com/eapi/(ad|abtest|sp|hot|mlivestream|store|mlog|search/(specialkeyword|defaultkeyword|hot)),REJECT-TINYGIF
-AND,((USER-AGENT, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*),(OR,((NOT,((DOMAIN-SUFFIX,music.126.net))), (DOMAIN-KEYWORD,admusic)))),REJECT-TINYGIF
+user-agent,https://interface3.music.163.com/eapi/(ad|abtest|sp|hot|mlivestream|store|mlog|search/(specialkeyword|defaultkeyword|hot)),REJECT-TINYGIF
+AND,((USER-AGENT, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*),(OR,((NOT,((host-suffix,music.126.net))), (host-suffix,admusic)))),REJECT-TINYGIF
 USER-AGENT,neteasemusic*,REJECT-TINYGIF
 
 # 图片直连
-AND,((USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*),(OR,((DOMAIN-SUFFIX,p1.music.126.net), (DOMAIN-SUFFIX,p2.music.126.net), (DOMAIN-SUFFIX,p3.music.126.net), (DOMAIN-SUFFIX,p4.music.126.net), (DOMAIN-SUFFIX,p5.music.126.net)))),DIRECT
+AND,((user-agent,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*),(OR,((host-suffix,p1.music.126.net), (host-suffix,p2.music.126.net), (host-suffix,p3.music.126.net), (host-suffix,p4.music.126.net), (host-suffix,p5.music.126.net)))),DIRECT
 
 # UnblockNeteaseMusic
 DOMAIN-SUFFIX,music.126.net, Music
