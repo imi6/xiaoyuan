@@ -1,13 +1,14 @@
-host-suffix, music.163.com, 自建网易云解锁
-host-suffix, music.126.net, 自建网易云解锁
-user-agent, NeteaseMusic*, 自建网易云解锁
-user-agent, NeteaseMusic**, 自建网易云解锁
-user-agent, 网易云音乐*, 自建网易云解锁
-user-agent, 网易云音乐**, 自建网易云解锁
-user-agent, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*, 自建网易云解锁
-user-agent, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90**, 自建网易云解锁
-ip-cidr, 59.111.181.0/24, 自建网易云解锁
-ip-cidr, 115.236.118.0/24, 自建网易云解锁
-ip-cidr, 223.252.199.0/24, 自建网易云解锁
-host-keyword, netease, 自建网易云解锁
-user-agent,yswyy.imi6.cn, direct
+# REJECT
+URL-REGEX,https?://interface3?.music.163.com/eapi/(ad|abtest|sp|hot|mlivestream|store|mlog|search/(specialkeyword|defaultkeyword|hot)),REJECT-TINYGIF
+AND,((USER-AGENT, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*),(OR,((NOT,((DOMAIN-SUFFIX,music.126.net))), (DOMAIN-KEYWORD,admusic)))),REJECT-TINYGIF
+USER-AGENT,neteasemusic*,REJECT-TINYGIF
+
+# 图片直连
+AND,((USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*),(OR,((DOMAIN-SUFFIX,p1.music.126.net), (DOMAIN-SUFFIX,p2.music.126.net), (DOMAIN-SUFFIX,p3.music.126.net), (DOMAIN-SUFFIX,p4.music.126.net), (DOMAIN-SUFFIX,p5.music.126.net)))),DIRECT
+
+# UnblockNeteaseMusic
+DOMAIN-SUFFIX,music.126.net, Music
+DOMAIN-SUFFIX,music.163.com, Music
+IP-CIDR,59.111.128.0/17, Music,no-resolve
+IP-CIDR,115.236.112.0/20, Music,no-resolve
+IP-CIDR,223.252.192.0/19, Music,no-resolve
