@@ -1,4 +1,4 @@
-# TelegramDOMAIN-SUFFIX,telegra.ph,force-remote-dns
+DOMAIN-SUFFIX,telegra.ph,force-remote-dns
 DOMAIN-SUFFIX,telegram.org,force-remote-dns
 DOMAIN-KEYWORD,telegram,force-remote-dns
 PROCESS-NAME,Telegram,force-remote-dns
