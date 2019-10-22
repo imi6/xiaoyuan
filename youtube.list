@@ -1,5 +1,7 @@
 USER-AGENT,com.google.ios.youtube*,force-remote-dns
 USER-AGENT,YouTube*,force-remote-dns
+DOMAIN-SUFFIX,youtubei.gooleapis.com,force-remote-dns
+DOMAIN-SUFFIX,*.gooleapis.com,force-remote-dns
 DOMAIN-SUFFIX,googlevideo.com,force-remote-dns
 DOMAIN-SUFFIX,youtube.com,force-remote-dns
 DOMAIN,youtubei.googleapis.com,force-remote-dns
