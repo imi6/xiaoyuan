@@ -1,19 +1,14 @@
-^https?:\/\/.+\.googlevideo\.com\/.+&oad
-^https?:\/\/.+\.googlevideo\.com\/ptracking\?pltype=adhost
-^https?:\/\/.+\.youtube\.com\/api\/stats\/.+adformat
-^https?:\/\/.+\.youtube\.com\/api\/stats\/ads
-^https?:\/\/.+\.youtube\.com\/get_midroll
-^https?:\/\/.+\.youtube\.com\/pagead\/ 
-^https?:\/\/.+\.youtube\.com\/ptracking\?
-^https?:\/\/m\.youtube\.com\/_get_ads
-^https?:\/\/pagead2\.googlesyndication\.com\/pagead\/
-^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite
-^https?:\/\/s\.youtube\.com\/api\/stats\/watchtime?adformat
-^https?:\/\/s0\.2mdn\.net\/ads\/
-^https?:\/\/stats\.tubemogul\.com\/stats\/
-^https?:\/\/youtubei\.googleapis\.com/.+ad_break
-^https?:\/\/.+\.googlevideo\.com\/.+ctier - reject 
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+log_
-^https?:\/\/.+\.youtube\.com\/get_midroll_
-^https?:\/\/.+\.youtube\.com\/ptracking
+# G
+# > Google
+URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/.+&oad
+URL-REGEX,^https?:\/\/.+\.googlevideo\.com\/.+ctier
+URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+ad_
+URL-REGEX,^https?:\/\/youtubei\.googleapis\.com\/youtubei\/.+log_
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/get_midroll_
+URL-REGEX,^https?:\/\/premiumyva\.appspot\.com\/vmclickstoadvertisersite
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/api\/stats\/ads
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/api\/stats\/.+adformat
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/pagead\/
+URL-REGEX,^https?:\/\/.+\.youtube\.com\/ptracking
+# > Youtube++
+URL-REGEX,^https?:\/\/api\.catch\.gift\/api\/v3\/pagead\/
