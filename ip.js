@@ -1,4 +1,4 @@
-const weaapi = "http://ip-api.com/json/"
+const weaapi = "http://ip-api.com/json/?lang=zh-CN"
 
 $httpClient.get(weaapi, function(error, response, data){
     if (error){
