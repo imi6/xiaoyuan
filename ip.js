@@ -1,4 +1,4 @@
-const weaapi = "http://pv.sohu.com/cityjson/"
+const weaapi = "http://ip-api.com/json/"
 
 $httpClient.get(weaapi, function(error, response, data){
     if (error){
@@ -7,8 +7,8 @@ $httpClient.get(weaapi, function(error, response, data){
     } else {
         var obj = JSON.parse(data);
         console.log(obj);
-        var dizhi = "所在城市： " + obj.city;
-        var szip = "所在IP： " + obj.cip;
+        var dizhi = "所在城市： " + obj.regionName;
+        var szip = "所在IP： " + obj.query;
         let wmation = [dizhi,szip];
         $notification.post(wmation[0], wmation[1]);
         $done();
