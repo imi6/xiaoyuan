@@ -7,12 +7,11 @@ $httpClient.get(weaapi, function(error, response, data){
     } else {
         var obj = JSON.parse(data);
         console.log(obj);
-        var guojia = "所在国家： " + obj.country;
         var shenfen = "所在省份： " + obj.regionName;
         var chengshi = "所在城市： " + obj.city;
         var szip = "所在IP： " + obj.query;
-        let wmation = [guojia,shenfen,chengshi,szip];
-        $notification.post(wmation[0], wmation[1], wmation[2], wmation[3]);
+        let wmation = [shenfen,chengshi,szip];
+        $notification.post(wmation[0], wmation[1], wmation[2]);
         $done();
     }
 }
