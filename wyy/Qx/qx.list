@@ -1,11 +1,95 @@
-#Qx
+DOMAIN-SUFFIX,p1.music.126.net,DIRECT
+DOMAIN-SUFFIX,p2.music.126.net,DIRECT
+DOMAIN-SUFFIX,p3.music.126.net,DIRECT
+DOMAIN-SUFFIX,p4.music.126.net,DIRECT
+DOMAIN-SUFFIX,p5.music.126.net,DIRECT
+DOMAIN-SUFFIX,p1c.music.126.net,DIRECT
+DOMAIN-SUFFIX,p2c.music.126.net,DIRECT
+DOMAIN-SUFFIX,p3c.music.126.net,DIRECT
+DOMAIN-SUFFIX,p4c.music.126.net,DIRECT
+DOMAIN-SUFFIX,p5c.music.126.net,DIRECT
+DOMAIN-KEYWORD,netease,自建网易云解锁
+DOMAIN-SUFFIX,music.126.net,自建网易云解锁
+DOMAIN-SUFFIX,163.com,自建网易云解锁
+DOMAIN-SUFFIX,music.163.com,自建网易云解锁
+DOMAIN-SUFFIX,interface.music.163.com,自建网易云解锁
+DOMAIN-SUFFIX,interface3.music.163.com,自建网易云解锁
+DOMAIN-SUFFIX,apm.music.163.com,自建网易云解锁
+DOMAIN-SUFFIX,apm3.music.163.com,自建网易云解锁
+DOMAIN-SUFFIX,man.netease.com,自建网易云解锁
+DOMAIN-SUFFIX,api.iplay.163.com,自建网易云解锁
+IP-CIDR,59.111.181.60/32,自建网易云解锁
+IP-CIDR,223.252.199.66/32,自建网易云解锁
+IP-CIDR,223.252.199.67/32,自建网易云解锁
+IP-CIDR,59.111.160.195/32,自建网易云解锁
+IP-CIDR,59.111.160.197/32,自建网易云解锁
+IP-CIDR,59.111.181.35/32,自建网易云解锁
+IP-CIDR,59.111.181.38/32,自建网易云解锁
+IP-CIDR,39.105.63.80/32,自建网易云解锁
+IP-CIDR,47.100.127.239/32,自建网易云解锁
+IP-CIDR,118.24.63.156/32,自建网易云解锁
+IP-CIDR,193.112.159.225/32,自建网易云解锁
+IP-CIDR,59.111.181.155/32,自建网易云解锁
+IP-CIDR,115.236.118.33/32,自建网易云解锁
+IP-CIDR, 59.111.128.0/17, 自建网易云解锁
+IP-CIDR, 115.236.112.0/20,自建网易云解锁
+IP-CIDR, 223.252.192.0/19,自建网易云解锁
+DOMAIN-SUFFIX,ac.dun.163yun.com,自建网易云解锁
+DOMAIN-SUFFIX,mr.da.netease.com,自建网易云解锁
+DOMAIN-SUFFIX,crash.163.com,自建网易云解锁
+IP-CIDR,101.71.154.241/32,自建网易云解锁
+DOMAIN-SUFFIX,imap.163.com,自建网易云解锁
+DOMAIN-SUFFIX,isure.stream.qqmusic.qq.com,自建网易云解锁
+IP-CIDR,101.71.154.241/32,自建网易云解锁
+IP-CIDR,115.236.118.33/32,自建网易云解锁
+DOMAIN,music.163.com,自建网易云解锁
+DOMAIN,interface.music.163.com,自建网易云解锁
+DOMAIN,interface3.music.163.com,自建网易云解锁
+DOMAIN,apm.music.163.com,自建网易云解锁
+DOMAIN,apm3.music.163.com,自建网易云解锁
+DOMAIN,man.netease.com,自建网易云解锁
+DOMAIN,api.iplay.163.com,自建网易云解锁
+IP-CIDR,59.111.181.60/32,自建网易云解锁
+IP-CIDR,223.252.199.66/32,自建网易云解锁
+IP-CIDR,223.252.199.67/32,自建网易云解锁
+IP-CIDR,59.111.160.195/32,自建网易云解锁
+IP-CIDR,59.111.160.197/32,自建网易云解锁
+IP-CIDR,59.111.181.35/32,自建网易云解锁
+IP-CIDR,59.111.181.38/32,自建网易云解锁
+IP-CIDR,39.105.63.80/32,自建网易云解锁
+IP-CIDR,47.100.127.239/32,自建网易云解锁
+IP-CIDR,118.24.63.156/32,自建网易云解锁
+IP-CIDR,193.112.159.225/32,自建网易云解锁
+IP-CIDR,59.111.181.155/32,自建网易云解锁
+IP-CIDR,101.71.154.241/32,自建网易云解锁
+IP-CIDR,115.236.118.33/32,自建网易云解锁
+
+
+
+
+
+# > 网易云图床直连D
+host-suffix, p1.music.126.net, direct
+host-suffix, p2.music.126.net, direct
+host-suffix, p3.music.126.net, direct
+host-suffix, p4.music.126.net, direct
+host-suffix, p5.music.126.net, direct
+host-suffix, p1c.music.126.net, direct
+host-suffix, p2c.music.126.net, direct
+host-suffix, p3c.music.126.net, direct
+host-suffix, p4c.music.126.net, direct
+host-suffix, p5c.music.126.net, direct
+# > 网易云音乐D
 host-suffix, music.163.com, 自建网易云解锁
 host-suffix, music.126.net, 自建网易云解锁
+host-keyword, netease, 自建网易云解锁
 user-agent, NeteaseMusic*, 自建网易云解锁
 user-agent, NeteaseMusic**, 自建网易云解锁
 user-agent, 网易云音乐*, 自建网易云解锁
 user-agent, 网易云音乐**, 自建网易云解锁
 user-agent, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*, 自建网易云解锁
 user-agent, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90**, 自建网易云解锁
+ip-cidr, 59.111.128.0/17, 自建网易云解锁
+ip-cidr, 115.236.112.0/20, 自建网易云解锁
+ip-cidr, 223.252.192.0/19, 自建网易云解锁
 host-keyword, netease, 自建网易云解锁
-user-agent,wyy.imi6.cn, 自建网易云解锁
