@@ -1,0 +1,33 @@
+{
+    "id": "ziye.app.sub",
+    "name": "v2p 脚本订阅",
+    "author": "@ziye",
+    "icon": "https://raw.githubusercontent.com/ziye66666/JavaScript/main/ziye.png",
+    "repo": "https://github.com/ziye66666",
+    "apps": [{
+           
+            "id": "bbb",
+            "name": "步步宝",
+            "keys": ["bbb_ck"],
+            "author": "@ziye",
+            "settings": [{
+                    "id": "bbbSuffix",
+                    "name": "当前账号",
+                    "val": "1",
+                    "type": "number",
+                    "desc": "当前抓取ck记录的账号序号，如：1、2、4、"
+                },
+                {
+                    "id": "bbbCount",
+                    "name": "账号个数",
+                    "val": "1",
+                    "type": "number",
+                    "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+                }
+            ],
+            "repo": "https://raw.githubusercontent.com/adwktt/adwktt/master/BBB.js",
+            "icons": ["https://qxzy.top/rules/QuantumultX/img/bbb.png", "https://qxzy.top/rules/QuantumultX/img/bbb.png"],
+            "script": "https://raw.githubusercontent.com/adwktt/adwktt/master/BBB.js"
+        }
+    ]
+}
