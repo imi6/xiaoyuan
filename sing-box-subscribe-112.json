@@ -45,7 +45,7 @@
                 "server": "dns_local"
             },
             {
-                "clash_mode": "global",
+                "clash_mode": "Global",
                 "action": "route",
                 "server": "dns_remote"
             },
@@ -54,6 +54,11 @@
                     "A",
                     "AAAA"
                 ],
+                "action": "route",
+                "server": "dns_fakeip",
+                "rewrite_ttl": 1
+            },
+            {
                 "rule_set": [
                     "geosite-facebook",
                     "geosite-google",
@@ -81,7 +86,8 @@
             }
         ],
         "independent_cache": true,
-        "strategy": "prefer_ipv4"
+        "strategy": "prefer_ipv4",
+        "final": "dns_remote"
     },
     "inbounds": [
         {
@@ -157,7 +163,7 @@
                 {
                     "action": "include",
                     "keywords": [
-                        "liudage|906492590"
+                        "liudage|906492590|isif|wmdl"
                     ]
                 }
             ],
@@ -169,7 +175,83 @@
         }
     ],
     "route": {
-        "default_domain_resolver": "dns_local",
+        "default_domain_resolver": {
+            "server": "dns_local"
+        },
+        "rules": [
+            {
+              "action": "sniff"
+            },
+            {
+              "type": "logical",
+              "mode": "or",
+              "rules": [
+                {
+                  "port": 53
+                },
+                {
+                  "protocol": "dns"
+                }
+              ],
+              "action": "hijack-dns"
+            },
+            {
+              "clash_mode": "Direct",
+              "action": "route",
+              "outbound": "out-direct"
+            },
+            {
+              "ip_is_private": true,
+              "action": "route",
+              "outbound": "out-direct"
+            },
+            {
+              "rule_set": [
+                "geosite-telegram",
+                "geoip-telegram"
+              ],
+              "action": "route",
+              "outbound": "📲telegram"
+            },
+            {
+              "rule_set": "geosite-openai",
+              "action": "route",
+              "outbound": "🤖AI"
+            },
+            {
+              "rule_set": [
+                "geoip-facebook",
+                "geosite-facebook",
+                "geoip-google",
+                "geosite-google",
+                "geosite-youtube",
+                "geosite-twitter",
+                "geoip-twitter",
+                "geosite-netflix",
+                "geoip-netflix",
+                "geosite-microsoft",
+                "geosite-tumblr",
+                "geosite-geolocation-!cn",
+                "geosite-proxy"
+              ],
+              "action": "route",
+              "outbound": "🚀代理"
+            },
+            {
+              "rule_set": [
+                "geosite-private",
+                "geoip-private",
+                "geoip-cn",
+                "geosite-cn",
+                "cn-site",
+                "cn-ipv4",
+                "cn-ipv6",
+                "geosite-pt"
+              ],
+              "action": "route",
+              "outbound": "out-direct"
+            }
+          ],
         "rule_set": [
             {
                 "type": "remote",
@@ -364,78 +446,8 @@
                 "download_detour": "🎁收集"
             }
         ],
-        "rules": [
-            {
-                "action": "sniff"
-            },
-            {
-                "type": "logical",
-                "mode": "or",
-                "rules": [
-                    {
-                        "port": 53
-                    },
-                    {
-                        "protocol": "dns"
-                    }
-                ],
-                "action": "hijack-dns"
-            },
-            {
-                "clash_mode": "Direct",
-                "action": "route",
-                "outbound": "out-direct"
-            },
-            {
-                "rule_set": [
-                    "geosite-telegram",
-                    "geoip-telegram"
-                ],
-                "action": "route",
-                "outbound": "📲telegram"
-            },
-            {
-                "rule_set": "geosite-openai",
-                "action": "route",
-                "outbound": "🤖AI"
-            },
-            {
-                "rule_set": [
-                    "geoip-facebook",
-                    "geosite-facebook",
-                    "geoip-google",
-                    "geosite-google",
-                    "geosite-youtube",
-                    "geosite-twitter",
-                    "geoip-twitter",
-                    "geosite-netflix",
-                    "geoip-netflix",
-                    "geosite-microsoft",
-                    "geosite-tumblr",
-                    "geosite-geolocation-!cn",
-                    "geosite-proxy"
-                ],
-                "action": "route",
-                "outbound": "🚀代理"
-            },
-            {
-                "ip_is_private": true,
-                "rule_set": [
-                    "geosite-private",
-                    "geoip-private",
-                    "geoip-cn",
-                    "geosite-cn",
-                    "cn-site",
-                    "cn-ipv4",
-                    "cn-ipv6",
-                    "geosite-pt"
-                ],
-                "action": "route",
-                "outbound": "out-direct"
-            }
-        ],
         "find_process": true,
         "auto_detect_interface": true,
-        "final": "out-direct"
+        "final": "🐠漏网之鱼"
     }
 }
